@@ -1,0 +1,17 @@
+--в начало:
+captcha = imgui.CreateTextureFromFile(getGameDirectory() .. "\\moonloader\\config\\AdminToolsGromov\\captcha.png")
+ImageWindow = imgui.ImBool(false)
+
+-- в беск. цикл:
+ imgui.Process = ImageWindow.v 
+ 
+-- в отрисовку имгуи
+	if ImageWindow.v then
+	        local sw, sh = getScreenResolution()
+        imgui.SetNextWindowPos(imgui.ImVec2(sw / 2, sh / 2), imgui.Cond.FirstUseEver, imgui.ImVec2(0.5, 0.5))
+        imgui.SetNextWindowSize(imgui.ImVec2(500, 230), imgui.Cond.FirstUseEver)
+
+        imgui.Begin('#sadsad33', ImageWindow, imgui.WindowFlags.NoCollapse + imgui.WindowFlags.NoResize + imgui.WindowFlags.NoMove + imgui.WindowFlags.NoSavedSettings + imgui.WindowFlags.AlwaysAutoResize + imgui.WindowFlags.NoTitleBar)
+			imgui.Image(captcha, imgui.ImVec2(669, 210)) 
+		imgui.End()
+	end
