@@ -1,5 +1,5 @@
 --в начало:
-captcha = imgui.CreateTextureFromFile(getGameDirectory() .. "\\moonloader\\config\\AdminToolsGromov\\captcha.png")
+captcha = imgui.CreateTextureFromFile(getGameDirectory() .. "\\moonloader\\config\\ArenaToolsBeta\\captcha.png")
 ImageWindow = imgui.ImBool(false)
 
 -- в беск. цикл:
